@@ -82,7 +82,7 @@ export function ProjectGallery() {
       title: "E-commerce Platform",
       description:
         "A robust online store with secure payment processing and inventory management.",
-      imageUrl: "../../public/Portfolio/Portfolio-2.png",
+      imageUrl: "/Portfolio/Portfolio-2.png",
       link: "#",
       category: "Web Development",
     },
@@ -90,7 +90,7 @@ export function ProjectGallery() {
       title: "Task Management App",
       description:
         "A collaborative task manager with real-time updates and user authentication.",
-      imageUrl: "../../public/Portfolio/Portfolio-2.png",
+      imageUrl: "/Portfolio/Portfolio-2.png",
       link: "#",
       category: "Mobile App",
     },
@@ -98,7 +98,7 @@ export function ProjectGallery() {
       title: "Personal Portfolio Website",
       description:
         "This very portfolio, showcasing modern web development techniques.",
-      imageUrl: "../../public/Portfolio/Portfolio-2.png",
+      imageUrl: "/Portfolio/Portfolio-2.png",
       link: "#",
       category: "Web Development",
     },
@@ -106,7 +106,7 @@ export function ProjectGallery() {
       title: "Financial Data Dashboard",
       description:
         "Interactive dashboard for visualizing stock market trends and financial metrics.",
-      imageUrl: "../../public/Portfolio/Portfolio-2.png",
+      imageUrl: "/Portfolio/Portfolio-2.png",
       link: "#",
       category: "Data Science",
     },
@@ -114,7 +114,7 @@ export function ProjectGallery() {
       title: "Recipe Sharing Platform",
       description:
         "A community-driven platform for sharing and discovering culinary recipes.",
-      imageUrl: "../../public/Portfolio/Portfolio-2.png",
+      imageUrl: "/Portfolio/Portfolio-2.png",
       link: "#",
       category: "Web Development",
     },
@@ -122,7 +122,7 @@ export function ProjectGallery() {
       title: "Fitness Tracker Mobile App",
       description:
         "Track workouts, set goals, and monitor progress with this intuitive mobile application.",
-      imageUrl: "../../public/Portfolio/Portfolio-2.png",
+      imageUrl: "/Portfolio/Portfolio-2.png",
       link: "#",
       category: "Mobile App",
     },

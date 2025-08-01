@@ -20,16 +20,13 @@ export const Home = () => {
       className={`flex flex-1 flex-col transition-all duration-300 ${
         isSidebarOpen ? "lg:ml-0" : "lg:ml-0"
       }`}>
-      <header className="sticky top-0 z-30 flex h-14 items-center gap-4 px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
-        {/* <Button
-          variant="ghost"
-          size="icon"
-          className="lg:hidden"
-          onClick={toggleSidebar}
-          aria-label="Toggle sidebar">
-          <Menu className="h-5 w-5" />
-        </Button> */}
-        <h1 className=" md:text-2xl">Home</h1>
+      <header className="z-30 flex h-14 items-center gap-4 px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}>
+          <h1 className="">Home</h1>
+        </motion.div>
       </header>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
         <motion.div></motion.div>
@@ -78,7 +75,7 @@ export const Home = () => {
                   <CardContent className="flex flex-col md:flex-row gap-4">
                     <div className="relative w-full md:w-1/2 h-48 md:h-auto min-h-[150px] rounded-md overflow-hidden">
                       <img
-                        src="../../public/Portfolio/Blog-1.png"
+                        src="/Portfolio/Blog-1.png"
                         alt="Featured Project"
                         className="w-full h-full object-fill"
                       />
