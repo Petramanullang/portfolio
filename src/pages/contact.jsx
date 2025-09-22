@@ -60,11 +60,15 @@ export const Contact = () => {
               connect with me on social media.
             </p>
             <div className="mt-4 flex gap-2">
-              <a href="#" className="text-primary hover:underline">
+              <a
+                href="mailto:petrajuliansen31@gmail.com"
+                className="text-primary hover:underline">
                 Send an Email
               </a>
               <span className="text-muted-foreground">|</span>
-              <a href="#" className="text-primary hover:underline">
+              <a
+                href="https://www.linkedin.com/in/petra-juliansen/"
+                className="text-primary hover:underline">
                 Message on LinkedIn
               </a>
             </div>

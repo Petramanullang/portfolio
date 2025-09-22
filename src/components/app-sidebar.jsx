@@ -60,8 +60,8 @@ export function AppSidebar() {
           </div>
 
           {/* Text label */}
-          <span className="font-semibold text-lg group-data-[collapsible=icon]:hidden">
-            Portfolio
+          <span className="font-semibold text-lg group-data-[collapsible=icon]:hidden translate-y-[2px] translate-x-[2px]">
+            Welcome
           </span>
         </a>
       </SidebarHeader>
