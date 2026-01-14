@@ -11,32 +11,41 @@ export const Contact = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.0 }}>
-        <Card>
+        transition={{ duration: 0.5, delay: 1.0 }}
+      >
+        <Card className="w-full">
           <CardHeader>
             <CardTitle>Essential Links</CardTitle>
           </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-1 gap-2">
-              <Button variant="ghost" className="justify-start px-0">
+          <CardContent className="w-full">
+            <div className="grid grid-cols-1 gap-2 w-full">
+              <Button variant="ghost" className="w-full justify-start">
                 <a
                   href="https://drive.google.com/uc?export=download&id=1usuOKx7BFhGGhAxG9rJAWaA-5OchQMkk"
-                  className="flex items-center text-primary hover:underline">
-                  Download My Resume <ArrowUpRight className="ml-1 h-4 w-4" />
+                  className="flex w-full items-center justify-between text-primary hover:underline"
+                >
+                  <span>Download My Resume</span>
+                  <ArrowUpRight className="h-4 w-4" />
                 </a>
               </Button>
-              <Button variant="ghost" className="justify-start px-0">
+
+              <Button variant="ghost" className="w-full justify-start">
                 <a
                   href="https://github.com/Petramanullang"
-                  className="flex items-center text-primary hover:underline">
-                  Visit GitHub Profile <ArrowUpRight className="ml-1 h-4 w-4" />
+                  className="flex w-full items-center justify-between text-primary hover:underline"
+                >
+                  <span>Visit GitHub Profile</span>
+                  <ArrowUpRight className="h-4 w-4" />
                 </a>
               </Button>
-              <Button variant="ghost" className="justify-start px-0">
+
+              <Button variant="ghost" className="w-full justify-start">
                 <a
                   href="https://www.linkedin.com/in/petra-juliansen/"
-                  className="flex items-center text-primary hover:underline">
-                  Connect on LinkedIn <ArrowUpRight className="ml-1 h-4 w-4" />
+                  className="flex w-full items-center justify-between text-primary hover:underline"
+                >
+                  <span>Connect on LinkedIn</span>
+                  <ArrowUpRight className="h-4 w-4" />
                 </a>
               </Button>
             </div>
@@ -48,7 +57,8 @@ export const Contact = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 1.2 }}>
+        transition={{ duration: 0.5, delay: 1.2 }}
+      >
         <Card>
           <CardHeader>
             <CardTitle>Get In Touch</CardTitle>
@@ -62,13 +72,15 @@ export const Contact = () => {
             <div className="mt-4 flex gap-2">
               <a
                 href="mailto:petrajuliansen31@gmail.com"
-                className="text-primary hover:underline">
+                className="text-primary hover:underline"
+              >
                 Send an Email
               </a>
               <span className="text-muted-foreground">|</span>
               <a
                 href="https://www.linkedin.com/in/petra-juliansen/"
-                className="text-primary hover:underline">
+                className="text-primary hover:underline"
+              >
                 Message on LinkedIn
               </a>
             </div>

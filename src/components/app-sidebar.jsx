@@ -19,6 +19,7 @@ import {
   User,
   Mail,
   Settings,
+  SquareLibrary,
   Github,
   Linkedin,
 } from "lucide-react";
@@ -36,6 +37,7 @@ export function AppSidebar() {
     { title: "Home", url: "/", icon: Home },
     { title: "Projects", url: "/projects", icon: FolderKanban },
     { title: "About", url: "/about", icon: User },
+    { title: "Blog", url: "/blog", icon: SquareLibrary },
     { title: "Contact", url: "/contact", icon: Mail },
   ];
 
