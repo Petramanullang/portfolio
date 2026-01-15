@@ -10,7 +10,7 @@ const Chip = ({ active, children, onClick }) => (
     className={[
       "rounded-full border px-3 py-1.5 text-xs font-semibold transition",
       active
-        ? "bg-white text-black border-white"
+        ? "bg-white text-white border-white"
         : "border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground",
     ].join(" ")}
   >

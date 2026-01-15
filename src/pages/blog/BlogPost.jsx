@@ -121,6 +121,10 @@ export const BlogPost = () => {
                       </div>
                     ) : (
                       <ArticleProse>
+                        <h4>Nama Kelompok </h4>
+                        <b>- Petra Juliansen Manullang - 202431127</b><br />
+                        <b>- Muhammad Raka Ilham - 202431145 </b>
+
                         <h2 id="pendahuluan">Pendahuluan</h2>
                         <p>
                           Dalam teknik digital, <b>Multiplexer (MUX)</b> dan{" "}
@@ -139,9 +143,7 @@ export const BlogPost = () => {
 
                         <figure>
                           <img src={post.cover} alt="Ilustrasi MUX/DEMUX" />
-                          <figcaption>
-                            Contoh ilustrasi
-                          </figcaption>
+                          <figcaption>Contoh ilustrasi</figcaption>
                         </figure>
 
                         <blockquote>
