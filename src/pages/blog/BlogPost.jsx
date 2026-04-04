@@ -1,4 +1,3 @@
-// src/pages/blog/BlogPost.jsx
 import React, { useMemo } from "react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -10,6 +9,7 @@ import {
   Tags,
   Youtube,
   Link as LinkIcon,
+  Image as ImageIcon,
 } from "lucide-react";
 import { BLOG_POSTS } from "./posts";
 import { ArticleProse } from "./components/ArticleProse";
@@ -110,142 +110,81 @@ export const BlogPost = () => {
                 </div>
 
                 <CardContent className="p-6 md:p-10">
-                  {/* ✅ Medium feel: center the article text width */}
                   <div className="mx-auto w-full max-w-[760px]">
-                    {post.slug !== "multiplexer-demultiplexer" ? (
+                    {post.content ? (
+                      <ArticleProse>
+                        {/* Render konten secara dinamis dari post.js */}
+                        <post.content />
+
+                        {/* Bagian Referensi (Bisa Video, Gambar, atau Keduanya) */}
+                        <h2 id="video">Referensi</h2>
+
+                        {ytId || post.referenceImage ? (
+                          <div className="mt-4 space-y-6">
+                            {/* 1. Jika ada YouTube, tampilkan ini */}
+                            {ytId && (
+                              <div className="overflow-hidden rounded-2xl border border-border bg-background">
+                                <div className="flex items-center justify-between gap-3 px-4 py-3 border-b border-border bg-accent/30">
+                                  <div className="inline-flex items-center gap-2 text-sm font-black">
+                                    <Youtube className="h-5 w-5" /> Cuplikan
+                                    YouTube
+                                  </div>
+                                  <a
+                                    href={`https://www.youtube.com/watch?v=${ytId}`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline"
+                                  >
+                                    <LinkIcon className="h-4 w-4" /> buka
+                                  </a>
+                                </div>
+
+                                <div className="aspect-video">
+                                  <iframe
+                                    className="h-full w-full"
+                                    src={`https://www.youtube.com/embed/${ytId}`}
+                                    title="YouTube video"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                  />
+                                </div>
+                              </div>
+                            )}
+
+                            {/* 2. Jika ada Gambar Referensi, tampilkan ini */}
+                            {post.referenceImage && (
+                              <div className="overflow-hidden rounded-2xl border border-border bg-background">
+                                <div className="flex items-center gap-3 px-4 py-3 border-b border-border bg-accent/30">
+                                  <div className="inline-flex items-center gap-2 text-sm font-black">
+                                    <ImageIcon className="h-5 w-5" /> Gambar
+                                    Referensi
+                                  </div>
+                                </div>
+                                <div className="p-4 bg-muted/20">
+                                  <img
+                                    src={post.referenceImage}
+                                    alt="Gambar Referensi"
+                                    className="w-full h-auto rounded-lg object-contain"
+                                  />
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        ) : (
+                          /* 3. Jika tidak ada video maupun gambar */
+                          <div className="mt-4 rounded-2xl border border-border bg-accent/20 p-4 text-sm text-muted-foreground">
+                            <b>Belum ada referensi.</b> Isi <code>youtube</code>{" "}
+                            atau <code>referenceImage</code> di post ini.
+                          </div>
+                        )}
+                      </ArticleProse>
+                    ) : (
                       <div className="rounded-2xl border border-border bg-accent/20 p-5">
                         <div className="text-sm font-black">Coming soon</div>
                         <p className="mt-2 text-sm text-muted-foreground">
                           Konten post ini belum diisi.
                         </p>
                       </div>
-                    ) : (
-                      <ArticleProse>
-                        <h4>Nama Kelompok </h4>
-                        <b>- Petra Juliansen Manullang - 202431127</b><br />
-                        <b>- Muhammad Raka Ilham - 202431145 </b>
-
-                        <h2 id="pendahuluan">Pendahuluan</h2>
-                        <p>
-                          Dalam teknik digital, <b>Multiplexer (MUX)</b> dan{" "}
-                          <b>Demultiplexer (DEMUX)</b> dipakai untuk mengatur
-                          jalur data/sinyal. MUX memilih satu input dari banyak
-                          input menuju satu output, sedangkan DEMUX mengarahkan
-                          satu input ke salah satu output berdasarkan selektor.
-                        </p>
-
-                        <h2 id="mux">Multiplexer (MUX)</h2>
-                        <p>
-                          MUX adalah rangkaian kombinasi untuk memilih input
-                          dengan sinyal selektor <code>S</code>. Contoh paling
-                          umum: <b>2:1 MUX</b>.
-                        </p>
-
-                        <figure>
-                          <img src={post.cover} alt="Ilustrasi MUX/DEMUX" />
-                          <figcaption>Contoh ilustrasi</figcaption>
-                        </figure>
-
-                        <blockquote>
-                          Tips: Kalau selektor <code>S=0</code> maka output ikut
-                          input A, kalau <code>S=1</code> output ikut input B.
-                        </blockquote>
-
-                        <h3 id="mux-table">Truth Table 2:1 MUX</h3>
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>S</th>
-                              <th>Y</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>0</td>
-                              <td>A</td>
-                            </tr>
-                            <tr>
-                              <td>1</td>
-                              <td>B</td>
-                            </tr>
-                          </tbody>
-                        </table>
-
-                        <h2 id="demux">Demultiplexer (DEMUX)</h2>
-                        <p>
-                          DEMUX adalah kebalikan MUX: satu input <code>D</code>{" "}
-                          diarahkan ke output tertentu. Contoh: <b>1:2 DEMUX</b>{" "}
-                          dengan output <code>Y0</code> dan <code>Y1</code>.
-                        </p>
-
-                        <h3 id="demux-table">Truth Table 1:2 DEMUX</h3>
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>S</th>
-                              <th>Y0</th>
-                              <th>Y1</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>0</td>
-                              <td>D</td>
-                              <td>0</td>
-                            </tr>
-                            <tr>
-                              <td>1</td>
-                              <td>0</td>
-                              <td>D</td>
-                            </tr>
-                          </tbody>
-                        </table>
-
-                        <h2 id="perbedaan">Perbedaan</h2>
-                        <ul>
-                          <li>
-                            <b>MUX</b>: banyak input → 1 output
-                          </li>
-                          <li>
-                            <b>DEMUX</b>: 1 input → banyak output
-                          </li>
-                          <li>Selektor memilih “jalur” yang aktif.</li>
-                        </ul>
-
-                        <h2 id="video">Video Referensi</h2>
-
-                        {ytId ? (
-                          <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-background">
-                            <div className="flex items-center justify-between gap-3 px-4 py-3 border-b border-border bg-accent/30">
-                              <div className="inline-flex items-center gap-2 text-sm font-black">
-                                <Youtube className="h-5 w-5" /> Cuplikan YouTube
-                              </div>
-                              <a
-                                href={`https://www.youtube.com/watch?v=${ytId}`}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="inline-flex items-center gap-2 text-xs font-bold text-primary hover:underline"
-                              >
-                                <LinkIcon className="h-4 w-4" /> buka
-                              </a>
-                            </div>
-                            <div className="aspect-video">
-                              <iframe
-                                className="h-full w-full"
-                                src={`https://www.youtube.com/embed/${ytId}`}
-                                title="YouTube video"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                              />
-                            </div>
-                          </div>
-                        ) : (
-                          <div className="mt-4 rounded-2xl border border-border bg-accent/20 p-4 text-sm text-muted-foreground">
-                            <b>Belum ada video.</b> Isi <code>youtube</code> di
-                            post ini.
-                          </div>
-                        )}
-                      </ArticleProse>
                     )}
                   </div>
                 </CardContent>
