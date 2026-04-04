@@ -36,7 +36,7 @@ export const BLOG_POSTS = [
     date: "2026-04-04",
     readTime: "5 min read",
     tag: "Data Warehouse",
-    cover: "/Blog/Data-Warehouse/Data-Warehouse-2.png",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-3.png",
     youtube: "",
     referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-3.png",
     content: ETLProcessPost,
