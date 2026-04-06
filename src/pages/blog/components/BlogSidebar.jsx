@@ -122,7 +122,7 @@ export const BlogSidebar = ({ posts = [], tags = [], activeTag, onTag }) => {
       </Card>
 
       {/* About / Footer */}
-      <Card className="border-border bg-background">
+      {/* <Card className="border-border bg-background">
         <CardContent className="p-5">
           <div className="flex items-center gap-2 font-black">
             <Info className="h-5 w-5" /> About
@@ -140,7 +140,7 @@ export const BlogSidebar = ({ posts = [], tags = [], activeTag, onTag }) => {
             <span className="hover:text-foreground cursor-pointer">Terms</span>
           </div>
         </CardContent>
-      </Card>
+      </Card> */}
     </aside>
   );
 };
