@@ -2,6 +2,7 @@ import React from "react";
 import { MuxDemuxContent } from "./content/MuxDemuxContent";
 import { DataConceptsPost } from "./content/DataConceptsPost";
 import { ETLProcessPost } from "./content/ETLProcessPost";
+import { StarSnowflakePost } from "./content/StarSnowflakePost";
 
 export const BLOG_POSTS = [
   {
@@ -68,6 +69,26 @@ export const BLOG_POSTS = [
       { id: "frekuensi-akses", label: "Frekuensi Akses" },
       { id: "istilah", label: "Istilah Baris & Kolom" },
       { id: "tujuan", label: "Tujuan Implementasi" },
+    ],
+  },
+  {
+    slug: "star-vs-snowflake-schema",
+    title:
+      "Pertemuan 4 - Star Schema vs Snowflake Schema: Mana yang Lebih Oke?",
+    excerpt:
+      "Membedah arsitektur penyimpanan data di Data Warehouse. Pilih si Bintang yang kenceng atau si Salju yang rapi?",
+    date: "2026-04-12",
+    readTime: "5 min read",
+    tag: "Data Warehouse",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-4.png",
+    youtube: "", // Isi kalau ada video praktikumnya
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-4.png",
+    content: StarSnowflakePost,
+    sections: [
+      { id: "star-schema", label: "Star Schema" },
+      { id: "snowflake-schema", label: "Snowflake Schema" },
+      { id: "perbandingan", label: "Perbandingan Detail" },
+      { id: "kesimpulan", label: "Pilih yang Mana?" },
     ],
   },
 ];
