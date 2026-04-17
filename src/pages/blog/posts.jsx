@@ -3,6 +3,7 @@ import { MuxDemuxContent } from "./content/MuxDemuxContent";
 import { DataConceptsPost } from "./content/DataConceptsPost";
 import { ETLProcessPost } from "./content/ETLProcessPost";
 import { StarSnowflakePost } from "./content/StarSnowflakePost";
+import { Pertemuan5Post } from "./content/Pertemuan5Post";
 
 export const BLOG_POSTS = [
   {
@@ -89,6 +90,25 @@ export const BLOG_POSTS = [
       { id: "snowflake-schema", label: "Snowflake Schema" },
       { id: "perbandingan", label: "Perbandingan Detail" },
       { id: "kesimpulan", label: "Pilih yang Mana?" },
+    ],
+  },
+  {
+    slug: "normalisasi-star-vs-snowflake",
+    title:
+      "Pertemuan 5 - Bedah Normalisasi: Kenapa Star Schema Sengaja Ngelanggar Aturan?",
+    excerpt:
+      "Ngebongkar rahasia 1NF, 2NF, 3NF di dalam tabel Data Warehouse dan tugas memperbaiki skema relasi Snowflake.",
+    date: "2026-04-17",
+    readTime: "5 min read",
+    tag: "Data Warehouse",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-5.png", // Sesuaikan nama file gambar kamu
+    youtube: "",
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-5.png",
+    content: Pertemuan5Post,
+    sections: [
+      { id: "star-schema-normalisasi", label: "Normalisasi Star Schema" },
+      { id: "snowflake-schema-normalisasi", label: "Normalisasi Snowflake" },
+      { id: "tugas-praktikum", label: "Tugas Praktikum 5" },
     ],
   },
 ];
