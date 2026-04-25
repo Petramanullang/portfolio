@@ -37,29 +37,29 @@ export const Pertemuan5Post = () => {
       </h2>
       <p>
         Di dunia database, ada aturan ketat yang namanya Normalisasi (1NF, 2NF,
-        3NF). Nah, uniknya si Star Schema ini agak "pemberontak"[cite: 50].
+        3NF). Nah, uniknya si Star Schema ini agak "pemberontak".
       </p>
       <ul>
         <li>
           <b>Tabel Fakta (Fact Table):</b> Anak baik. Tabel fakta kayak{" "}
           <code>fact_sales_order_item</code> ini udah dinormalisasi sampe level
-          3NF[cite: 51]. Semua kolom non-key bergantung sepenuhnya sama{" "}
+          3NF. Semua kolom non-key bergantung sepenuhnya sama{" "}
           <i>composite primary key</i>-nya, dan gak ada yang saling bergantung
-          (dependensi transitif)[cite: 52, 53].
+          (dependensi transitif).
         </li>
         <li>
           <b>Tabel Dimensi (Dimension Table):</b> Nah, ini dia si pemberontak!
           Tabel dimensi sengaja <b>didenormalisasi</b> (cuma mentok di
-          2NF)[cite: 50, 55]. Tujuannya? Biar pas dipanggil (query), mesin nggak
+          2NF). Tujuannya? Biar pas dipanggil (query), mesin nggak
           usah repot-repot nyambungin banyak tabel, jadi performa bacanya
-          wusss... cepet banget! [cite: 50]
+          wusss... cepet banget!
         </li>
       </ul>
       <p>
         Tapi ya gitu, karena cuma 2NF, dia ngelanggar aturan 3NF karena banyak{" "}
-        <b>dependensi transitif</b>[cite: 59]. Contohnya di{" "}
+        <b>dependensi transitif</b>. Contohnya di{" "}
         <code>dim_branch</code>, kolom <code>division</code> bergantung ke{" "}
-        <code>region</code>, bukan langsung ke Primary Key-nya[cite: 66].
+        <code>region</code>, bukan langsung ke Primary Key-nya.
       </p>
 
       <h2 id="snowflake-schema-normalisasi">
@@ -68,31 +68,29 @@ export const Pertemuan5Post = () => {
       <p>
         Kalo Star Schema sengaja ngelanggar aturan, <b>Snowflake Schema</b> ini
         tipe anak rajin yang taat hukum. Semua tabelnya, baik Fakta maupun
-        Dimensi, <b>wajib lulus ujian 3NF</b>[cite: 69, 74, 77, 80].
+        Dimensi, <b>wajib lulus ujian 3NF</b>.
       </p>
       <p>
         Gimana cara ngilangin dependensi transitifnya? Ya dengan dipecah-pecah!
-        [cite: 78, 81]
       </p>
       <ul>
         <li>
           Tabel <code>product</code> dipecah jadi <code>product</code> dan{" "}
-          <code>product_group</code>[cite: 74, 76].
+          <code>product_group</code>.
         </li>
         <li>
           Tabel <code>customer</code> nyimpen alamat kota doang, terus
           dihubungin ke tabel <code>town</code>, dan tabel <code>town</code>{" "}
-          dihubungin lagi ke <code>state</code>[cite: 77, 78].
+          dihubungin lagi ke <code>state</code>.
         </li>
         <li>
           Tabel cabang (<code>store</code>) juga sama, dipecah berjenjang dari{" "}
-          <code>store</code> ➔ <code>region</code> ➔ <code>division</code>[cite:
-          80, 81].
+          <code>store</code> ➔ <code>region</code> ➔ <code>division</code>.
         </li>
       </ul>
       <p>
         Hasilnya? Data jadi super rapi dan ukurannya hemat karena nggak ada data
-        dobel[cite: 79]. Tapi ya gitu, kalo mau nyari info lengkap, sistem harus
+        dobel. Tapi ya gitu, kalo mau nyari info lengkap, sistem harus
         nge-<i>join</i> banyak tabel sekaligus.
       </p>
 
@@ -118,11 +116,10 @@ export const Pertemuan5Post = () => {
               <td className="px-4 py-3">
                 Kita harus benerin relasi antar tabel! <code>order_id</code>{" "}
                 dari <code>sales_order_header</code> nggak boleh dikirim
-                sembarangan kemana-mana[cite: 84]. Terus, ID dari{" "}
+                sembarangan kemana-mana. Terus, ID dari{" "}
                 <code>sales_order_detail</code> harus dimasukin ke{" "}
                 <code>sales_order_header</code> sebagai <i>foreign key</i> (bisa
-                dicek di script <code>dw_d_prak1_snowflake.sql</code>)[cite: 84,
-                85].
+                dicek di script <code>dw_d_prak1_snowflake.sql</code>).
               </td>
             </tr>
             <tr className="bg-background">
@@ -131,10 +128,10 @@ export const Pertemuan5Post = () => {
               </td>
               <td className="px-4 py-3">
                 Kita juga praktek bikin Star Schema buat sistem
-                Perpustakaan[cite: 88]. Ada satu tabel fakta (
-                <code>fact_pinjam_buku</code>) [cite: 100], yang dikelilingin 4
+                Perpustakaan. Ada satu tabel fakta (
+                <code>fact_pinjam_buku</code>), yang dikelilingin 4
                 tabel dimensi: Penulis, Buku, Peminjam, dan Waktu Pinjam (script{" "}
-                <code>dw_d_quiz1_star.sql</code>)[cite: 89, 94, 106, 110, 114].
+                <code>dw_d_quiz1_star.sql</code>).
               </td>
             </tr>
           </tbody>

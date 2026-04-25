@@ -4,6 +4,7 @@ import { DataConceptsPost } from "./content/DataConceptsPost";
 import { ETLProcessPost } from "./content/ETLProcessPost";
 import { StarSnowflakePost } from "./content/StarSnowflakePost";
 import { Pertemuan5Post } from "./content/Pertemuan5Post";
+import { Pertemuan6Post } from "./content/Pertemuan6Post";
 
 export const BLOG_POSTS = [
   {
@@ -109,6 +110,24 @@ export const BLOG_POSTS = [
       { id: "star-schema-normalisasi", label: "Normalisasi Star Schema" },
       { id: "snowflake-schema-normalisasi", label: "Normalisasi Snowflake" },
       { id: "tugas-praktikum", label: "Tugas Praktikum 5" },
+    ],
+  },
+  {
+    slug: "praktikum-snowflake-schema",
+    title: "Praktikum 6: Merakit Snowflake Schema & Aturan Emasnya",
+    excerpt:
+      "Latihan langsung memecah tabel dimensi dan memahami satu aturan emas Snowflake Schema yang pantang dilanggar.",
+    date: "2026-04-25",
+    readTime: "4 min read",
+    tag: "Data Modeling",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-6.png",
+    youtube: "",
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-6.png",
+    content: Pertemuan6Post,
+    sections: [
+      { id: "bedah-skema", label: "Dari Bintang Jadi Salju" },
+      { id: "aturan-emas", label: "Aturan Emas Snowflake" },
+      { id: "uji-coba-join", label: "Uji Coba JOIN" },
     ],
   },
 ];
