@@ -120,7 +120,7 @@ export const BLOG_POSTS = [
       "Latihan langsung memecah tabel dimensi dan memahami satu aturan emas Snowflake Schema yang pantang dilanggar.",
     date: "2026-04-25",
     readTime: "4 min read",
-    tag: "Data Modeling",
+    tag: "Data Warehouse",
     cover: "/Blog/Data-Warehouse/Data-Warehouse-6.png",
     youtube: "",
     referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-6.png",
@@ -133,12 +133,13 @@ export const BLOG_POSTS = [
   },
   {
     slug: "persiapan-uts-data-warehouse",
-    title: "Pertemuan 7: Ngerancang Data Warehouse dari Struk Belanjaan! Simulasi Live Coding UTS",
+    title:
+      "Pertemuan 7: Ngerancang Data Warehouse dari Struk Belanjaan! Simulasi Live Coding UTS",
     excerpt:
       "Simulasi Live Coding UTS! Bedah teori Physical Design, optimasi Buffer Pool, sampe merancang Star Schema dari sebuah struk belanja.",
     date: "2026-05-02",
     readTime: "6 min read",
-    tag: "Ujian",
+    tag: "Data Warehouse",
     cover: "/Blog/Data-Warehouse/Data-Warehouse-7.png", // Ganti dengan gambar cover kamu
     youtube: "",
     referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-7.png", // Masukkan gambar struk Mie Gacoannya
