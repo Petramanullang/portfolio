@@ -5,6 +5,7 @@ import { ETLProcessPost } from "./content/ETLProcessPost";
 import { StarSnowflakePost } from "./content/StarSnowflakePost";
 import { Pertemuan5Post } from "./content/Pertemuan5Post";
 import { Pertemuan6Post } from "./content/Pertemuan6Post";
+import { Pertemuan7Post } from "./content/Pertemuan7Post";
 
 export const BLOG_POSTS = [
   {
@@ -128,6 +129,24 @@ export const BLOG_POSTS = [
       { id: "bedah-skema", label: "Dari Bintang Jadi Salju" },
       { id: "aturan-emas", label: "Aturan Emas Snowflake" },
       { id: "uji-coba-join", label: "Uji Coba JOIN" },
+    ],
+  },
+  {
+    slug: "persiapan-uts-data-warehouse",
+    title: "Pertemuan 7: Ngerancang Data Warehouse dari Struk Belanjaan! Simulasi Live Coding UTS",
+    excerpt:
+      "Simulasi Live Coding UTS! Bedah teori Physical Design, optimasi Buffer Pool, sampe merancang Star Schema dari sebuah struk belanja.",
+    date: "2026-05-02",
+    readTime: "6 min read",
+    tag: "Ujian",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-7.png", // Ganti dengan gambar cover kamu
+    youtube: "",
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-7.png", // Masukkan gambar struk Mie Gacoannya
+    content: Pertemuan7Post,
+    sections: [
+      { id: "teori-physical-design", label: "Teori Physical Design" },
+      { id: "trik-optimasi", label: "Trik Optimasi (Buffer & Partisi)" },
+      { id: "bedah-kasus-invoice", label: "Bedah Kasus Invoice" },
     ],
   },
 ];
