@@ -6,6 +6,7 @@ import { StarSnowflakePost } from "./content/StarSnowflakePost";
 import { Pertemuan5Post } from "./content/Pertemuan5Post";
 import { Pertemuan6Post } from "./content/Pertemuan6Post";
 import { Pertemuan7Post } from "./content/Pertemuan7Post";
+import { Pertemuan9Post } from "./content/Pertemuan9Post";
 
 export const BLOG_POSTS = [
   {
@@ -148,6 +149,25 @@ export const BLOG_POSTS = [
       { id: "teori-physical-design", label: "Teori Physical Design" },
       { id: "trik-optimasi", label: "Trik Optimasi (Buffer & Partisi)" },
       { id: "bedah-kasus-invoice", label: "Bedah Kasus Invoice" },
+    ],
+  },
+  {
+    slug: "olap-cube-data-warehouse",
+    title: "Praktikum 9: Mengutak-atik Data dengan Operasi OLAP Cube 📊",
+    excerpt:
+      "Belajar cara mengekstrak data warehouse dari berbagai sudut pandang menggunakan operasi Roll-Up, Drill-Down, Slice, Dice, dan Pivot.",
+    date: "2026-06-06", // Tanggal rilis hari ini
+    readTime: "5 min read",
+    tag: "Data Warehouse",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-9.png",
+    youtube: "",
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-9.png",
+    content: Pertemuan9Post,
+    sections: [
+      { id: "mengenal-olap", label: "Mengenal OLAP & Cube" },
+      { id: "operasi-olap", label: "5 Operasi Utama OLAP" },
+      { id: "codingan-bagian-a", label: "Query SQL Bagian A" },
+      { id: "codingan-bagian-b", label: "Studi Kasus Bagian B" },
     ],
   },
 ];
