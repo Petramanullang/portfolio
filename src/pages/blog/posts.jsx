@@ -189,4 +189,40 @@ export const BLOG_POSTS = [
       { id: "studi-kasus", label: "Studi Kasus Pelanggan" },
     ],
   },
+  {
+    slug: "slowly-changing-dimension-scd",
+    title: "Praktikum 10: Mengatasi Data yang Berubah-ubah dengan SCD",
+    excerpt:
+      "Gimana cara ngurus data pelanggan yang sering berubah domisili atau naik level member tanpa merusak histori masa lalu? Kenalan sama SCD Type 1, 2, dan 3!",
+    date: "2026-06-11", // Tanggal rilis hari ini
+    readTime: "5 min read",
+    tag: "Data Warehouse",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-10.png",
+    youtube: "",
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-10.png",
+    content: Pertemuan10Post,
+    sections: [
+      { id: "apa-itu-scd", label: "Apa itu SCD?" },
+      { id: "jenis-scd", label: "3 Jurus Utama SCD" },
+      { id: "studi-kasus", label: "Studi Kasus Pelanggan" },
+    ],
+  },
+  {
+    slug: "slowly-changing-dimension-scd",
+    title: "Praktikum 10: Mengatasi Data yang Berubah-ubah dengan SCD",
+    excerpt:
+      "Gimana cara ngurus data pelanggan yang sering berubah domisili atau naik level member tanpa merusak histori masa lalu? Kenalan sama SCD Type 1, 2, dan 3!",
+    date: "2026-06-11", // Tanggal rilis hari ini
+    readTime: "5 min read",
+    tag: "Data Warehouse",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-10.png",
+    youtube: "",
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-10.png",
+    content: Pertemuan10Post,
+    sections: [
+      { id: "apa-itu-scd", label: "Apa itu SCD?" },
+      { id: "jenis-scd", label: "3 Jurus Utama SCD" },
+      { id: "studi-kasus", label: "Studi Kasus Pelanggan" },
+    ],
+  },
 ];

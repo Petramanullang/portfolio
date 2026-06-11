@@ -19,7 +19,7 @@ const EmptyState = ({ onReset }) => (
       </p>
       <div className="mt-4">
         <Button
-          className="border-2 bg-[#171717] hover:bg-white! hover:text-black!"
+          className="border-2 bg-white! hover:bg-white! hover:text-black!"
           onClick={onReset}
         >
           Reset filter
@@ -51,7 +51,7 @@ const EndOfFeed = () => (
 );
 
 export const BlogIndex = () => {
-  const q = useBlogQuery(BLOG_POSTS, { pageSize: 6 });
+  const q = useBlogQuery(BLOG_POSTS, { pageSize: 10 });
 
   const showPosts = q.visible.length > 0;
 
@@ -88,6 +88,54 @@ export const BlogIndex = () => {
                     <BlogPostRow post={post} />
                   </motion.div>
                 ))}
+
+                {q.totalPages > 1 ? (
+                  <div className="space-y-4 rounded-2xl border border-border bg-background p-4">
+                    <div className="text-sm text-muted-foreground">
+                      Halaman {q.page} dari {q.totalPages} • Menampilkan{" "}
+                      {q.visible.length} dari {q.filtered.length} post
+                    </div>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <Button
+                        className="border-2 bg-white! hover:bg-white! hover:text-black!"
+                        onClick={() => q.setPage(q.page - 1)}
+                        disabled={!q.canPrev}
+                      >
+                        Sebelumnya
+                      </Button>
+
+                      {Array.from({ length: q.totalPages }, (_, index) => {
+                        const pageNumber = index + 1;
+                        return (
+                          <Button
+                            key={pageNumber}
+                            className={`border-2 ${
+                              pageNumber === q.page
+                                ? "bg-white! text-black!"
+                                : "bg-background hover:bg-white! hover:text-black!"
+                            }`}
+                            onClick={() => q.setPage(pageNumber)}
+                            disabled={pageNumber === q.page}
+                          >
+                            {pageNumber}
+                          </Button>
+                        );
+                      })}
+
+                      <Button
+                        className="border-2 bg-white! hover:bg-white! hover:text-black!"
+                        onClick={() => q.setPage(q.page + 1)}
+                        disabled={!q.canLoadMore}
+                      >
+                        Berikutnya
+                      </Button>
+                    </div>
+                  </div>
+                ) : q.filtered.length > 0 ? (
+                  <div className="rounded-2xl border border-border bg-background p-4 text-sm text-muted-foreground">
+                    Semua blog sudah ditampilkan.
+                  </div>
+                ) : null}
               </>
             )}
           </div>

@@ -44,14 +44,16 @@ export const useBlogQuery = (posts, { pageSize = 6 } = {}) => {
   }, [posts, query, tag, sort]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
-  const pageClamped = Math.min(page, totalPages);
+  const pageClamped = Math.min(Math.max(page, 1), totalPages);
 
   const visible = useMemo(() => {
+    const start = (pageClamped - 1) * pageSize;
     const end = pageClamped * pageSize;
-    return filtered.slice(0, end);
+    return filtered.slice(start, end);
   }, [filtered, pageClamped, pageSize]);
 
-  const canLoadMore = visible.length < filtered.length;
+  const canLoadMore = pageClamped < totalPages;
+  const canPrev = pageClamped > 1;
 
   const reset = () => {
     setQuery("");
@@ -60,7 +62,9 @@ export const useBlogQuery = (posts, { pageSize = 6 } = {}) => {
     setPage(1);
   };
 
-  const loadMore = () => setPage((p) => p + 1);
+  const loadMore = () => setPage((p) => Math.min(p + 1, totalPages));
+  const setPageNumber = (value) =>
+    setPage(Math.min(Math.max(value, 1), totalPages));
 
   // reset page when filter changes
   const setQuerySafe = (v) => {
@@ -89,7 +93,9 @@ export const useBlogQuery = (posts, { pageSize = 6 } = {}) => {
     filtered,
     visible,
     canLoadMore,
+    canPrev,
     loadMore,
+    setPage: setPageNumber,
     reset,
   };
 };
