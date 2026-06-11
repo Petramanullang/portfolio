@@ -7,6 +7,7 @@ import { Pertemuan5Post } from "./content/Pertemuan5Post";
 import { Pertemuan6Post } from "./content/Pertemuan6Post";
 import { Pertemuan7Post } from "./content/Pertemuan7Post";
 import { Pertemuan9Post } from "./content/Pertemuan9Post";
+import { Pertemuan10Post } from "./content/Pertemuan10Post";
 
 export const BLOG_POSTS = [
   {
@@ -153,7 +154,7 @@ export const BLOG_POSTS = [
   },
   {
     slug: "olap-cube-data-warehouse",
-    title: "Praktikum 9: Mengutak-atik Data dengan Operasi OLAP Cube 📊",
+    title: "Praktikum 9: Mengutak-atik Data dengan Operasi OLAP Cube",
     excerpt:
       "Belajar cara mengekstrak data warehouse dari berbagai sudut pandang menggunakan operasi Roll-Up, Drill-Down, Slice, Dice, dan Pivot.",
     date: "2026-06-06", // Tanggal rilis hari ini
@@ -168,6 +169,24 @@ export const BLOG_POSTS = [
       { id: "operasi-olap", label: "5 Operasi Utama OLAP" },
       { id: "codingan-bagian-a", label: "Query SQL Bagian A" },
       { id: "codingan-bagian-b", label: "Studi Kasus Bagian B" },
+    ],
+  },
+  {
+    slug: "slowly-changing-dimension-scd",
+    title: "Praktikum 10: Mengatasi Data yang Berubah-ubah dengan SCD",
+    excerpt:
+      "Gimana cara ngurus data pelanggan yang sering berubah domisili atau naik level member tanpa merusak histori masa lalu? Kenalan sama SCD Type 1, 2, dan 3!",
+    date: "2026-06-11", // Tanggal rilis hari ini
+    readTime: "5 min read",
+    tag: "Data Warehouse",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-10.png",
+    youtube: "",
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-10.png",
+    content: Pertemuan10Post,
+    sections: [
+      { id: "apa-itu-scd", label: "Apa itu SCD?" },
+      { id: "jenis-scd", label: "3 Jurus Utama SCD" },
+      { id: "studi-kasus", label: "Studi Kasus Pelanggan" },
     ],
   },
 ];
