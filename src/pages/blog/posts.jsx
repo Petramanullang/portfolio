@@ -8,6 +8,7 @@ import { Pertemuan6Post } from "./content/Pertemuan6Post";
 import { Pertemuan7Post } from "./content/Pertemuan7Post";
 import { Pertemuan9Post } from "./content/Pertemuan9Post";
 import { Pertemuan10Post } from "./content/Pertemuan10Post";
+import { Pertemuan11Post } from "./content/Pertemuan11Post";
 
 export const BLOG_POSTS = [
   {
@@ -187,6 +188,24 @@ export const BLOG_POSTS = [
       { id: "apa-itu-scd", label: "Apa itu SCD?" },
       { id: "jenis-scd", label: "3 Jurus Utama SCD" },
       { id: "studi-kasus", label: "Studi Kasus Pelanggan" },
+    ],
+  },
+  {
+    slug: "praktikum-kelompok-olap-p11",
+    title: "Praktikum 11: Kerja Kelompok Eksekusi 7 Operasi OLAP!",
+    excerpt:
+      "Laporan hasil eksplorasi Kelompok 6 mengeksekusi Roll Up, Drill Down, Slice, Dice, hingga ngoding Pivot SQL untuk memutar data.",
+    date: "2026-06-21",
+    readTime: "6 min read",
+    tag: "Kerja Kelompok",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-11.png",
+    youtube: "",
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-11.png",
+    content: Pertemuan11Post,
+    sections: [
+      { id: "rollup-drilldown", label: "Roll Up & Drill Down" },
+      { id: "slice-dice", label: "Slice & Dice" },
+      { id: "sisa-misi", label: "Pivot & Drill Across" },
     ],
   },
 ];
