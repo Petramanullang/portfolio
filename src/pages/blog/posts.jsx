@@ -9,6 +9,9 @@ import { Pertemuan7Post } from "./content/Pertemuan7Post";
 import { Pertemuan9Post } from "./content/Pertemuan9Post";
 import { Pertemuan10Post } from "./content/Pertemuan10Post";
 import { Pertemuan11Post } from "./content/Pertemuan11Post";
+import { Pertemuan12Post } from "./content/Pertemuan12Post";
+import { Pertemuan13Post } from "./content/Pertemuan13Post";
+import { Pertemuan14Post } from "./content/Pertemuan14Post";
 
 export const BLOG_POSTS = [
   {
@@ -118,7 +121,7 @@ export const BLOG_POSTS = [
   },
   {
     slug: "praktikum-snowflake-schema",
-    title: "Praktikum 6: Merakit Snowflake Schema & Aturan Emasnya",
+    title: "Pertemuan 6: Merakit Snowflake Schema & Aturan Emasnya",
     excerpt:
       "Latihan langsung memecah tabel dimensi dan memahami satu aturan emas Snowflake Schema yang pantang dilanggar.",
     date: "2026-04-25",
@@ -155,7 +158,7 @@ export const BLOG_POSTS = [
   },
   {
     slug: "olap-cube-data-warehouse",
-    title: "Praktikum 9: Mengutak-atik Data dengan Operasi OLAP Cube",
+    title: "Pertemuan 9: Mengutak-atik Data dengan Operasi OLAP Cube",
     excerpt:
       "Belajar cara mengekstrak data warehouse dari berbagai sudut pandang menggunakan operasi Roll-Up, Drill-Down, Slice, Dice, dan Pivot.",
     date: "2026-06-06", // Tanggal rilis hari ini
@@ -174,7 +177,7 @@ export const BLOG_POSTS = [
   },
   {
     slug: "slowly-changing-dimension-scd",
-    title: "Praktikum 10: Mengatasi Data yang Berubah-ubah dengan SCD",
+    title: "Pertemuan 10: Mengatasi Data yang Berubah-ubah dengan SCD",
     excerpt:
       "Gimana cara ngurus data pelanggan yang sering berubah domisili atau naik level member tanpa merusak histori masa lalu? Kenalan sama SCD Type 1, 2, dan 3!",
     date: "2026-06-11", // Tanggal rilis hari ini
@@ -192,12 +195,12 @@ export const BLOG_POSTS = [
   },
   {
     slug: "praktikum-kelompok-olap-p11",
-    title: "Praktikum 11: Kerja Kelompok Eksekusi 7 Operasi OLAP!",
+    title: "Pertemuan 11: Kerja Kelompok Eksekusi 7 Operasi OLAP!",
     excerpt:
       "Laporan hasil eksplorasi Kelompok 6 mengeksekusi Roll Up, Drill Down, Slice, Dice, hingga ngoding Pivot SQL untuk memutar data.",
     date: "2026-06-21",
     readTime: "6 min read",
-    tag: "Kerja Kelompok",
+    tag: "Data Warehouse",
     cover: "/Blog/Data-Warehouse/Data-Warehouse-11.png",
     youtube: "",
     referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-11.png",
@@ -206,6 +209,64 @@ export const BLOG_POSTS = [
       { id: "rollup-drilldown", label: "Roll Up & Drill Down" },
       { id: "slice-dice", label: "Slice & Dice" },
       { id: "sisa-misi", label: "Pivot & Drill Across" },
+    ],
+  },
+  {
+    slug: "implementasi-data-warehouse-industri",
+    title: "Pertemuan 12: Bedah Kasus DW di 5 Sektor Industri!",
+    excerpt:
+      "Laporan Individu: Dari mendeteksi kredit macet Fintech, robot penjaga gudang PT KAI, sampai rahasia algoritma Netflix!",
+    date: "2026-06-26",
+    readTime: "7 min read",
+    tag: "Data Warehouse",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-12.png", // Siapkan cover buatanmu
+    youtube: "",
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-12.png",
+    content: Pertemuan12Post,
+    sections: [
+      { id: "sektor-keuangan", label: "Fintech & Perbankan" },
+      { id: "sektor-industri", label: "Industri Migas" },
+      { id: "sektor-pemerintahan", label: "Pemerintahan" },
+      { id: "sektor-transportasi", label: "Transportasi (KAI)" },
+      { id: "sektor-marketing", label: "Marketing (Netflix)" },
+    ],
+  },
+  {
+    slug: "kuliah-praktisi-hris-etl",
+    title:
+      "Pertemuan 13: Kuliah Praktisi - HRIS, Penilaian KPI, dan Bocoran UAS!",
+    excerpt:
+      "Membahas implementasi Data Warehouse dalam Human Resource Information System (HRIS) dan konsep ETL (Extract, Transform, Destination).",
+    date: "2026-07-03",
+    readTime: "5 min read",
+    tag: "Data Warehouse",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-13.png",
+    youtube: "",
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-13.png",
+    content: Pertemuan13Post,
+    sections: [
+      { id: "dw-dalam-hris", label: "DW & Fitur HRIS" },
+      { id: "kpi-dilema", label: "Terlambat Tapi Performa Bagus?" },
+      { id: "bocoran-uas-etl", label: "Bocoran UAS: ETL" },
+    ],
+  },
+  {
+    slug: "praktikum-sql-operasi-olap",
+    title: "Pertemuan 14: Eksekusi Nyata Operasi OLAP dengan SQL! 💻",
+    excerpt:
+      "Nggak cuma teori, di pertemuan ini kita langsung turun ke database buat ngerjain Roll Up, Slice, Dice, Pivot, sampai Drill Across pakai SQL.",
+    date: "2026-07-10",
+    readTime: "6 min read",
+    tag: "Data Warehouse",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-14.png", // Siapkan nama gambarnya
+    youtube: "",
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-14.png",
+    content: Pertemuan14Post,
+    sections: [
+      { id: "persiapan-data", label: "Persiapan Data" },
+      { id: "agregasi-rincian", label: "Roll Up & Drill Down" },
+      { id: "potong-kubus", label: "Slice & Dice" },
+      { id: "pivot-across", label: "Pivot & Drill Across" },
     ],
   },
 ];
