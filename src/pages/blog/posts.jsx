@@ -12,6 +12,7 @@ import { Pertemuan11Post } from "./content/Pertemuan11Post";
 import { Pertemuan12Post } from "./content/Pertemuan12Post";
 import { Pertemuan13Post } from "./content/Pertemuan13Post";
 import { Pertemuan14Post } from "./content/Pertemuan14Post";
+import { Pertemuan15Post } from "./content/Pertemuan15Post";
 
 export const BLOG_POSTS = [
   {
@@ -180,7 +181,7 @@ export const BLOG_POSTS = [
     title: "Pertemuan 10: Mengatasi Data yang Berubah-ubah dengan SCD",
     excerpt:
       "Gimana cara ngurus data pelanggan yang sering berubah domisili atau naik level member tanpa merusak histori masa lalu? Kenalan sama SCD Type 1, 2, dan 3!",
-    date: "2026-06-11", // Tanggal rilis hari ini
+    date: "2026-06-10", // Tanggal rilis hari ini
     readTime: "5 min read",
     tag: "Data Warehouse",
     cover: "/Blog/Data-Warehouse/Data-Warehouse-10.png",
@@ -198,7 +199,7 @@ export const BLOG_POSTS = [
     title: "Pertemuan 11: Kerja Kelompok Eksekusi 7 Operasi OLAP!",
     excerpt:
       "Laporan hasil eksplorasi Kelompok 6 mengeksekusi Roll Up, Drill Down, Slice, Dice, hingga ngoding Pivot SQL untuk memutar data.",
-    date: "2026-06-21",
+    date: "2026-06-11",
     readTime: "6 min read",
     tag: "Data Warehouse",
     cover: "/Blog/Data-Warehouse/Data-Warehouse-11.png",
@@ -216,7 +217,7 @@ export const BLOG_POSTS = [
     title: "Pertemuan 12: Bedah Kasus DW di 5 Sektor Industri!",
     excerpt:
       "Laporan Individu: Dari mendeteksi kredit macet Fintech, robot penjaga gudang PT KAI, sampai rahasia algoritma Netflix!",
-    date: "2026-06-26",
+    date: "2026-06-12",
     readTime: "7 min read",
     tag: "Data Warehouse",
     cover: "/Blog/Data-Warehouse/Data-Warehouse-12.png", // Siapkan cover buatanmu
@@ -237,7 +238,7 @@ export const BLOG_POSTS = [
       "Pertemuan 13: Kuliah Praktisi - HRIS, Penilaian KPI, dan Bocoran UAS!",
     excerpt:
       "Membahas implementasi Data Warehouse dalam Human Resource Information System (HRIS) dan konsep ETL (Extract, Transform, Destination).",
-    date: "2026-07-03",
+    date: "2026-06-21",
     readTime: "5 min read",
     tag: "Data Warehouse",
     cover: "/Blog/Data-Warehouse/Data-Warehouse-13.png",
@@ -252,10 +253,10 @@ export const BLOG_POSTS = [
   },
   {
     slug: "praktikum-sql-operasi-olap",
-    title: "Pertemuan 14: Eksekusi Nyata Operasi OLAP dengan SQL! 💻",
+    title: "Pertemuan 14: Eksekusi Nyata Operasi OLAP dengan SQL!",
     excerpt:
       "Nggak cuma teori, di pertemuan ini kita langsung turun ke database buat ngerjain Roll Up, Slice, Dice, Pivot, sampai Drill Across pakai SQL.",
-    date: "2026-07-10",
+    date: "2026-06-27",
     readTime: "6 min read",
     tag: "Data Warehouse",
     cover: "/Blog/Data-Warehouse/Data-Warehouse-14.png", // Siapkan nama gambarnya
@@ -267,6 +268,26 @@ export const BLOG_POSTS = [
       { id: "agregasi-rincian", label: "Roll Up & Drill Down" },
       { id: "potong-kubus", label: "Slice & Dice" },
       { id: "pivot-across", label: "Pivot & Drill Across" },
+    ],
+  },
+  {
+    slug: "mengatasi-perubahan-data-scd",
+    title: "Praktikum 15: Mengatasi Perubahan Data dengan SCD!",
+    excerpt:
+      "Gimana cara ngurus data pelanggan yang sering berubah domisili atau naik level member tanpa merusak histori masa lalu? Mari kita bedah bareng!",
+    date: "2026-07-07",
+    readTime: "5 min read",
+    tag: "Data Warehouse",
+    cover: "/Blog/Data-Warehouse/Data-Warehouse-15.png",
+    youtube: "",
+    referenceImage: "/Blog/Data-Warehouse/Data-Warehouse-15.png",
+    content: Pertemuan15Post,
+    sections: [
+      { id: "apa-itu-scd", label: "Apa itu SCD?" },
+      { id: "studi-kasus", label: "Studi Kasus Budi" },
+      { id: "scd-type-1", label: "SCD Type 1 (Overwrite)" },
+      { id: "scd-type-2", label: "SCD Type 2 (New Record)" },
+      { id: "scd-type-3", label: "SCD Type 3 (New Column)" },
     ],
   },
 ];
